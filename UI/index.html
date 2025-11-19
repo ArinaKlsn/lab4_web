@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система управления помещениями</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container">
+                <h1 class="logo">Управление помещениями</h1>
+                <nav class="nav">
+                    <button class="nav-btn active" data-page="main">Главная</button>
+                    <button class="nav-btn" data-page="departments">Подразделения</button>
+                    <button class="nav-btn" data-page="rooms">Помещения</button>
+                    <button class="nav-btn" data-page="reports">Отчеты</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            
+            <section id="main-page" class="page active">
+                <div class="container">
+                    <h2>Добро пожаловать в систему управления помещениями</h2>
+                    <div class="dashboard">
+                        <div class="card" data-page="departments">
+                            <h3>Подразделения</h3>
+                            <p>Управление организационной структурой</p>
+                            <small>→ Нажмите для перехода к подразделениям</small>
+                        </div>
+                        <div class="card" data-page="rooms">
+                            <h3>Помещения</h3>
+                            <p>Учет и управление помещениями</p>
+                            <small>→ Нажмите для перехода к помещениям</small>
+                        </div>
+                        <div class="card" data-page="reports">
+                            <h3>Отчеты</h3>
+                            <p>Формирование отчетов и аналитика</p>
+                            <small>→ Нажмите для просмотра отчетов</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="departments-page" class="page">
+                <div class="container">
+                    <div class="page-header">
+                        <h2>Управление подразделениями</h2>
+                        <button class="btn-primary" id="add-department">+ Добавить подразделение</button>
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="search-box">
+                            <input type="text" placeholder="Поиск подразделений..." id="search-departments">
+                            <button class="btn-search">Найти</button>
+                        </div>
+                        <div class="filters">
+                            <button class="btn-sort" data-sort="name">Сортировка по имени</button>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="list-container">
+                            <div class="list-header">
+                                <span>Название</span>
+                                <span>Родительское подразделение</span>
+                                <span>Действия</span>
+                            </div>
+                            <div class="list">
+                                <div class="list-item">
+                                    <span>Отдел кадров</span>
+                                    <span>Администрация</span>
+                                    <div class="actions">
+                                        <button class="btn-edit">Редактировать</button>
+                                        <button class="btn-delete">Удалить</button>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <span>IT отдел</span>
+                                    <span>Администрация</span>
+                                    <div class="actions">
+                                        <button class="btn-edit">Редактировать</button>
+                                        <button class="btn-delete">Удалить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="rooms-page" class="page">
+                <div class="container">
+                    <h2>Управление помещениями</h2>
+                    
+                    <p>Содержимое страницы помещений</p>
+                </div>
+            </section>
+
+            <section id="reports-page" class="page">
+                <div class="container">
+                    <h2>Отчеты</h2>
+                    
+                    <p>Содержимое страницы отчетов</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Система управления помещениями. Все права защищены.</p>
+                <p>Колесникович А.А., 3 курс, 6 группа</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
